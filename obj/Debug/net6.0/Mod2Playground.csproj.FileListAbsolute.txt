@@ -1,0 +1,15 @@
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\Mod2Playground.csproj.AssemblyReference.cache
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\Mod2Playground.GeneratedMSBuildEditorConfig.editorconfig
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\Mod2Playground.AssemblyInfoInputs.cache
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\Mod2Playground.AssemblyInfo.cs
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\Mod2Playground.csproj.CoreCompileInputs.cache
+Q:\Dev10\Mod2Playground\bin\Debug\net6.0\Mod2Playground.exe
+Q:\Dev10\Mod2Playground\bin\Debug\net6.0\Mod2Playground.deps.json
+Q:\Dev10\Mod2Playground\bin\Debug\net6.0\Mod2Playground.runtimeconfig.json
+Q:\Dev10\Mod2Playground\bin\Debug\net6.0\Mod2Playground.dll
+Q:\Dev10\Mod2Playground\bin\Debug\net6.0\Mod2Playground.pdb
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\Mod2Playground.dll
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\refint\Mod2Playground.dll
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\Mod2Playground.pdb
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\Mod2Playground.genruntimeconfig.cache
+Q:\Dev10\Mod2Playground\obj\Debug\net6.0\ref\Mod2Playground.dll
