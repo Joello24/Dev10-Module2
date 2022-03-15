@@ -39,6 +39,23 @@ namespace Mod2Playground
             Console.ResetColor();
             return gotIt;
         }
+        //public bool GetYesOrNo()
+        //{
+        //    string res = PromptUser("");
+        //    while (string.IsNullOrEmpty(res))
+        //    {
+        //        Console.WriteLine("Input required❗");
+        //        res = PromptUser();
+        //    }
+
+        //    return true;
+        //}
+
+        private static string PromptUser(string message)
+        {
+            Console.Write(message);
+            return Console.ReadLine() ?? string.Empty;
+        }
         public void Display(string message)
         {
             Console.WriteLine(message);

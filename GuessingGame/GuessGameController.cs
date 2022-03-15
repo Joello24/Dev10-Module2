@@ -4,8 +4,10 @@ namespace Mod2Playground
 {
     class GuessGameController
     {
-        private static int difficulty;
+        private static int difficulty = 0;
         public ConsoleIO UI { get; set; }
+        public GameMode Mode { get; set; }
+        public bool custom = true;
         public GuessGameController(ConsoleIO ui)
         {
             UI = ui;
@@ -38,13 +40,19 @@ namespace Mod2Playground
             switch (v)
             {
                 case "1":
-                    difficulty = 100;
+                    difficulty = GameMode.EASY;
+                    custom = false;
                     break;
                 case "2":
-                    difficulty = 200;
+                    difficulty = GameMode.MEDIUM;
+                    custom = false;
                     break;
                 case "3":
-                    difficulty = 300;
+                    difficulty = GameMode.HARD;
+                    custom = false;
+                    break;
+                case "4":
+                    difficulty = UI.GetInt("Please enter a custom highbound: ");
                     break;
             }
         }
@@ -52,6 +60,7 @@ namespace Mod2Playground
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nMAIN MENU");
+            Console.WriteLine($"");
             Console.WriteLine("============");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("1. Play");
@@ -72,6 +81,7 @@ namespace Mod2Playground
             Console.WriteLine("1. Easy");
             Console.WriteLine("2. Medium");
             Console.WriteLine("3. Hard");
+            Console.WriteLine("4. Custom");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("============");
             Console.ForegroundColor = ConsoleColor.Green;
@@ -81,12 +91,16 @@ namespace Mod2Playground
         private void Play()
         {
             int guess = -1;
-            GuessService game = new GuessService(Helpers.GetValidInt());
+            if (difficulty == 0)
+            {
+                SetGameMode(ChangeGameModeMenu());
+            }
+            GuessService game = new GuessService(difficulty);
             game.fakeInt = 5;
             while (game.Number != guess)
             {
                 // TODO: Prompt here for highbound, or have it be based on game-mode. Pass to GetValidGuess.
-                Console.WriteLine(game.ProcessGuess(guess = UI.GetValidGuess(game.highBound)));
+                Console.WriteLine(game.ProcessGuess(guess = UI.GetValidGuess(difficulty)));
                 game.IncrementGuesses();
                 Console.ResetColor();
             }
