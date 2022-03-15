@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace Mod2Playground
 {
-    internal class Model
+    internal class GuessService
     {
-        private static int guesses;
-        private static int number;
+        public int guesses
+            { get; set; }
 
-        public Model(int High)
+        private int number;
+        public int highBound;
+        public int fakeInt;
+
+        public GuessService(int High)
         {
             CreateGuessInRange(High);
+            this.highBound = High;
         }
         public int Number
         {
             get { return number; }
-            set { number = value; }
-        }
-        public static int Guesses
-        {
-            get { return guesses; }
         }
         public void IncrementGuesses()
         {
@@ -31,7 +31,7 @@ namespace Mod2Playground
         private void CreateGuessInRange(int high)
         {
             Random random = new Random();
-            this.Number = random.Next(1, high);
+            this.number = random.Next(1, high);
         }
         public string ProcessGuess(int Guess)
         {

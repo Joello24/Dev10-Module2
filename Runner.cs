@@ -10,7 +10,12 @@ namespace Mod2Playground
     {
         public static void Main(string[] args)
         {
-            GameController.Run();
+            //GameController.Run();
+
+            ConsoleIO io = new ConsoleIO();
+
+            GuessGameController Game = new GuessGameController(io);
+            Game.Run();
         }
     }
 }
